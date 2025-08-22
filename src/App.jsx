@@ -1,4 +1,9 @@
 import './App.css'
+import Header from './components/Header.jsx'
+import AboutCard from './components/AboutCard.jsx'
+import MainContent from './components/MainContent.jsx'
+import Sidebar from './components/Sidebar.jsx'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   // Enhanced interactions
@@ -16,26 +21,6 @@ function App() {
         document.querySelectorAll('.stat-card, .cv-card').forEach((card, index) => {
             card.style.animation = `float ${4 + index * 0.7}s ease-in-out infinite`;
         });
-
-        // Parallax effect for about card background
-        // let aboutCard = document.querySelector('.about-card');
-        // document.addEventListener('mousemove', (e) => {
-        //     const rect = aboutCard.getBoundingClientRect();
-        //     const x = e.clientX - rect.left;
-        //     const y = e.clientY - rect.top;
-            
-        //     const centerX = rect.width / 2;
-        //     const centerY = rect.height / 2;
-            
-        //     const deltaX = (x - centerX) / centerX;
-        //     const deltaY = (y - centerY) / centerY;
-            
-        //     aboutCard.style.transform = `perspective(1000px) rotateY(${deltaX * 2}deg) rotateX(${-deltaY * 2}deg)`;
-        // });
-
-        // aboutCard.addEventListener('mouseleave', () => {
-        //     aboutCard.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg)';
-        // });
 
         // Smooth scroll reveal animation
         const observerOptions = {
@@ -68,6 +53,18 @@ function App() {
                 }, index * 150);
             });
         }, 300);
+    
+    return (
+        <div className="container">
+            <Header />
+            <div className="main-grid">
+                <AboutCard />
+                <MainContent />
+                <Sidebar />
+            </div>
+        </div>
+    )
+    
 }
 
 export default App
