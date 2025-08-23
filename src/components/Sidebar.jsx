@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Sidebar() { 
     return (
         <div className="sidebar">
@@ -12,9 +14,15 @@ export default function Sidebar() {
                 </div>
                 
                 <div className="cv-card">
-                    <div className="cv-icon">📄</div>
-                    <div className="cv-text">Download CV</div>
+                    <Link to="/Mycv" className="cv-link">
+                        <div className="cv-icon">📄</div>
+                        <div className="cv-text">See My CV</div>
+                    </Link>
                 </div>
             </div>
     )
 }
+
+
+
+// onClick={() => window.location.href = '/Mycv'}
