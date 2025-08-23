@@ -12,17 +12,19 @@ export default function MainContent() {
         </p> */}
 
         <div className="cv-preview">
-          <embed
-            src="/Cvku.pdf"
-            width="100%"
-            height="600px"
-            style={{ border: "none" }}
-            title="CV Preview" />
+            <iframe src="/Cvku.pdf" title="mobile-fallback" />
+            <p className="mobile-fallback">
+                <a href="/Cvku.pdf" target="_blank" rel="noopener noreferrer" className="cv-link">
+                📄 Open CV in new tab
+                </a>
+            </p>
         </div>
       </div>
     </div>
   )
 }
+
+
 
 
 // <Link to="/Latestwork" className="work-btn">
