@@ -698,6 +698,55 @@
             background: rgba(0,0,0,0.2);
         }
 
+        .project-image1 {
+            width: 100%;
+            height: 200px;
+            background: url('../public/Smartlock.jpg') no-repeat center center;
+            background-size: cover; /* gambar akan ngecover penuh kotak, tanpa distorsi */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .project-image1::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .project-image2 {
+            width: 100%;
+            height: 200px;
+            background: url('../public/ethwallet.png') no-repeat center center;
+            background-size: cover; /* gambar akan ngecover penuh kotak, tanpa distorsi */
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .project-image2::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.2);
+        }
+
+
         .project-content {
             padding: 25px;
         }
